@@ -8,6 +8,8 @@ Este repositório contém resultados eleitorais agregados a diferentes níveis t
 
 ### Ficheiros
 
+#### Resultados Eleitorais
+
 | Ficheiro | Órgão | Nível | Descrição |
 |----------|-------|-------|-----------|
 | [cm_concelhos.csv](cm_concelhos.csv) | Câmara Municipal | Concelho | Resultados para CM agregados por concelho |
@@ -16,9 +18,20 @@ Este repositório contém resultados eleitorais agregados a diferentes níveis t
 | [am_freguesias.csv](am_freguesias.csv) | Assembleia Municipal | Freguesia | Resultados para AM desagregados por freguesia |
 | [jf_freguesias.csv](jf_freguesias.csv) | Junta de Freguesia | Freguesia | Resultados para JF por freguesia |
 
+#### Dados de Participação
+
+| Ficheiro | Órgão | Nível | Descrição |
+|----------|-------|-------|-----------|
+| [cm_concelhos_participacao.csv](cm_concelhos_participacao.csv) | Câmara Municipal | Concelho | Participação para CM agregada por concelho |
+| [cm_freguesias_participacao.csv](cm_freguesias_participacao.csv) | Câmara Municipal | Freguesia | Participação para CM desagregada por freguesia |
+| [am_concelhos_participacao.csv](am_concelhos_participacao.csv) | Assembleia Municipal | Concelho | Participação para AM agregada por concelho |
+| [am_freguesias_participacao.csv](am_freguesias_participacao.csv) | Assembleia Municipal | Freguesia | Participação para AM desagregada por freguesia |
+
 ### Estrutura dos Dados
 
-Cada ficheiro CSV contém as seguintes colunas:
+#### Ficheiros de Resultados Eleitorais
+
+Os ficheiros de resultados contêm as seguintes colunas:
 
 - `election_code`: Código da eleição (AUT25)
 - `election_date`: Data da eleição (2025-10-12)
@@ -36,6 +49,29 @@ Cada ficheiro CSV contém as seguintes colunas:
 - `presidents`: Presidências ganhas (CM/JF)
 - `absolute_majorities`: Maiorias absolutas obtidas (CM)
 - `electoral_circles_compete`: Círculos eleitorais disputados
+
+#### Ficheiros de Participação
+
+Os ficheiros de participação contêm as seguintes colunas:
+
+- `election_code`: Código da eleição (AUT25)
+- `election_date`: Data da eleição (2025-10-12)
+- `territory_code`: Código do território (dicofre) seguindo a tipologia do INE
+- `territory_name`: Nome do território
+- `territory_type`: Tipo de território (Concelho/Freguesia)
+- `organ`: Órgão (CM/AM/JF)
+- `subscribers`: Número de eleitores inscritos
+- `votes`: Total de votos expressos (válidos + brancos + nulos)
+- `voters_pct`: Percentagem de participação
+- `abstention_pct`: Percentagem de abstenção
+- `blank_votes`: Número de votos em branco
+- `blank_pct`: Percentagem de votos em branco
+- `null_votes`: Número de votos nulos
+- `null_pct`: Percentagem de votos nulos
+- `mandates_assigned`: Mandatos atribuídos
+- `mandates_unassigned`: Mandatos não atribuídos
+- `mandates_total`: Total de mandatos
+- `state`: Estado do apuramento
 
 ## 📄 Licença
 
